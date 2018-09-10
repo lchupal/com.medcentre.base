@@ -1,15 +1,24 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
         <html>
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-            <title>Login</title>
+            <title>Registration</title>
             <%@ include file="/jsp/include.jsp" %>
+            <link rel="stylesheet" href="<c:url value="/resources/css/style.css" />" />
         </head>
         <body>
+
+         <header>
+                        <ul>
+                           <li><img src="jsp/logotype.png" alt="logotype"  style="width: 290px; margin: 15px; padding-left: 100px;"/></li>
+                           <li></br><p align="right" style="font-size: italic; color: white; padding-left: 1100px; margin: 10px;"> Телефон поддержки </br> +375(29)105 37 43 <p></li>
+                        </ul>
+                    </header>
+
             <form:form id="loginForm" modelAttribute="login" action="loginProcess" method="post">
-                <table align="center">
+                <table align="center"; style="border-style: solid;  outset; border-width: 2px">
                     <tr>
                         <td>
                             <form:label path="passport">Номер паспорта: </form:label>

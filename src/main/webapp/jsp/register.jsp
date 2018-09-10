@@ -18,7 +18,7 @@
                     header {
                         width: 100%;
                         height: 100px;
-                        background: LightGreen;
+                        background: black;
                         }
 
                     ul {
@@ -42,7 +42,7 @@
             <header>
                 <ul>
                    <li><img src="jsp/logotype.png" alt="logotype"  style="width: 290px; margin: 15px; padding-left: 100px;"/></li>
-                   <li></br><p align="right" style="font-size: italic; color: white; padding-left: 1100px; margin: 10px;"> Телефон поддержки </br> +375(29)105 37 43 <p></li>
+                   <li></br><p align="right" style="font-size: italic; color: white; padding-left: 2000px; margin: 10px;"> Телефон поддержки </br> +375(29)105 37 43 <p></li>
                 </ul>
             </header>
 
@@ -61,7 +61,7 @@
                                          <form:label path="surname">Фамилия</form:label>
                                      </td>
                                       <td>
-                                        <form:input path="surname" name="surname" id="surname" class="form-control" placeholder="Иванов"/>
+                                        <form:input path="surname" pattern="[A-ZА-ЯЁ]{1}[a-zа-яё]{1,}"  name="surname" id="surname" class="form-control" placeholder="Иванов"  required = "required" />
                                            </td>
                                            </tr>
                                    <tr>
@@ -69,7 +69,7 @@
                                            <form:label path="username" >Имя</form:label>
                                        </td>
                                        <td>
-                                           <form:input path="username" name="name" id="name" class="form-control" placeholder="Иван"/>
+                                           <form:input path="username" type="text" pattern="[A-ZА-ЯЁ]{1}[a-zа-яё]{1,}" name="name" id="name" class="form-control" placeholder="Иван" required = "required" />
                                        </td>
                                    </tr>
                                         <tr>
@@ -77,7 +77,7 @@
                                          <form:label path="midlename">Отчество</form:label>
                                      </td>
                                       <td>
-                                        <form:input path="midlename" name="middle_name" id="middle_name" class="form-control" placeholder="Иванов"/>
+                                        <form:input path="midlename"  type="text" pattern="[A-ZА-ЯЁ]{1}[a-zа-яё]{1,}" name="middle_name" id="middle_name" class="form-control" placeholder="Иванов" required = "required" />
                                            </td>
                                            </tr>
 
@@ -86,7 +86,7 @@
                                               <form:label path="dateOfBirth">Дата рождения</form:label>
                                          </td>
                                          <td>
-                                              <form:input  path="dateOfBirth" type="date" name="date_of_birth" id="date_of_birth" class="form-control" placeholder="ГГГГ-ММ-ДД"/>
+                                              <form:input  path="dateOfBirth" type="date" name="date_of_birth" id="date_of_birth" class="form-control" placeholder="ГГГГ-ММ-ДД" required = "required" />
                                          </td>
                                    </tr>
                                          <tr>
@@ -95,36 +95,37 @@
                                          </td>
                                          <td>
                                               <form:select name="gender" path="gender">
-                                              <form:option selected="selected" value="first">Муж</form:option>
-                                              <form:option value="second">Жен</form:option>
+                                              <form:option selected="selected" value="Муж">Муж</form:option>
+                                              <form:option value="Жен">Жен</form:option>
                                                </form:select>
                                          </td>
                                    </tr>
 
+<tr>
+                                       <td>
+                                           <form:label path="passport">Номер паспортаспорта</form:label>
+                                       </td>
+                                       <td>
+                                           <form:input path="passport"  type="text" pattern="(A-Z){2}[0-9]{6}" name="pasport" id="pasport" class="form-control" placeholder="MP123456" required = "required" />
+                                       </td>
+                                   </tr>
 
                                    <tr>
                                          <td>
-                                              <form:label path="numPassword">Номер паспортаспорта</form:label>
+                                              <form:label path="numPassword">Пароль</form:label>
                                          </td>
                                          <td>
-                                              <form:input path="numPassword" name="password" id="password" class="form-control" placeholder="Пароль"/>
+                                              <form:password path="numPassword" pattern="{6,}" name="password" id="password" class="form-control" placeholder="Пароль"  title="Должен сожержать 6 и более символов" required = "required" />
                                          </td>
                                    </tr>
 
-                                    <tr>
-                                       <td>
-                                           <form:label path="passport">Пароль</form:label>
-                                       </td>
-                                       <td>
-                                           <form:password path="passport" name="pasport" id="pasport" class="form-control" placeholder="MP123456"/>
-                                       </td>
-                                   </tr>
+
                                    <tr>
                                          <td>
                                               <form:label path="phoneNumber">Номер телефона</form:label>
                                          </td>
                                          <td>
-                                              <form:input path="phoneNumber" name="phone_number" id="phone_number" class="form-control" placeholder="+375 29 105 37 43"/>
+                                              <form:input path="phoneNumber" type="tel" pattern="80+[0-9]{9}" name="phone_number" id="phone_number" class="form-control" placeholder="80-29 105 37 43"  required = "required" />
                                          </td>
                                    </tr>
                                    <tr>
@@ -132,7 +133,7 @@
                                            <form:label path="email">Электронная почта</form:label>
                                        </td>
                                        <td>
-                                           <form:input path="email" name="mail" id="mail" class="form-control" placeholder="Ivanov@mail.com"/>
+                                           <form:input path="email" type="email" name="mail" id="mail" class="form-control" placeholder="Ivanov@mail.com"/>
                                        </td>
                                    </tr>
 
