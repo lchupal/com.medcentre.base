@@ -106,7 +106,7 @@
                                            <form:label path="passport">Номер паспортаспорта</form:label>
                                        </td>
                                        <td>
-                                           <form:input path="passport"  type="text" pattern="(A-Z){2}[0-9]{6}" name="pasport" id="pasport" class="form-control" placeholder="MP123456" required = "required" />
+                                           <form:input path="passport"  type="text" pattern="[A-Z]{2}[0-9]{6}" name="pasport" id="pasport" class="form-control" placeholder="MP123456" required = "required" />
                                        </td>
                                    </tr>
 
