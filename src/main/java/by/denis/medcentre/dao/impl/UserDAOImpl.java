@@ -13,7 +13,7 @@ public class UserDAOImpl implements UserDAO {
 
     private static final String SQL_INSERT_USER = "INSERT INTO clients (surname, name, middle_name, date_of_birth, gender, password, pasport,phone_number, mail) VALUES(?,?,?,?,?,?,?,?,?)";
 
-    private static final String SQL_SELECT_USER_BY_USERNAME_PASSWORD = "SELECT * FROM clients WHERE pasport=? and password=?";
+    private static final String SQL_SELECT_USER_BY_PASPORT_PASSWORD = "SELECT * FROM clients WHERE pasport=? and password=?";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -35,9 +35,10 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public User validateUser(Login passport) {
-        List<User> users = jdbcTemplate.query(SQL_SELECT_USER_BY_USERNAME_PASSWORD,
+        List<User> users = jdbcTemplate.query(SQL_SELECT_USER_BY_PASPORT_PASSWORD,
                 new Object[]{passport.getPassport(), passport.getPassword()},
                 new UserMapper());
         return users.size() > 0 ? users.get(0) : null;
     }
+
 }
