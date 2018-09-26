@@ -8,42 +8,19 @@
             <%@ include file="/jsp/include.jsp" %>
             <link rel="stylesheet" href="<c:url value="/resources/css/style.css" />" />
 
-                <style>
-                    td {
-                         margin: 10px;
-                         padding: 10px;
-                         background: AntiqueWhite
-                        }
 
-                    header {
-                        width: 100%;
-                        height: 100px;
-                        background: black;
-                        }
-
-                    ul {
-                        list-style: none; /*убираем маркеры списка*/
-                        margin: 0; /*убираем отступы*/
-                        padding-left: 0; /*убираем отступы*/
-                        }
-                    a {
-                        text-decoration: none; /*убираем подчеркивание текста ссылок*/
-                        }
-                    li {
-                        float:left; /*Размещаем список горизонтально для реализации меню*/
-                        margin-right:5px; /*Добавляем отступ у пунктов меню*/
-                        }
-                </style>
 
 
         </head>
         <body>
 
             <header>
-                <ul>
-                   <li><img src="jsp/logotype.png" alt="logotype"  style="width: 290px; margin: 15px; padding-left: 100px;"/></li>
-                   <li></br><p align="right" style="font-size: italic; color: white; padding-left: 2000px; margin: 10px;"> Телефон поддержки </br> +375(29)105 37 43 <p></li>
-                </ul>
+               <table width="100%" cellspacing="0" cellpadding="5">
+                                      <tr>
+                                       <td width="200" valign="top"><img src="jsp/logotype.png" alt="logotype"  style="width: 290px; margin: 15px; padding-left: 100px;"/></td>
+                                       <td valign="top"><p align="right" style="font-size: italic; color: red; padding-left: 200px; margin: 10px;"> Телефон поддержки </br> +375(29)105 37 43 <p></td>
+                                      </tr>
+                                     </table>
             </header>
 
             <form:form id="regForm" modelAttribute="user" action="registerProcess" method="post">

@@ -33,12 +33,14 @@ public class UserDAOImpl implements UserDAO {
                 user.getEmail());
     }
 
+
     @Override
     public User validateUser(Login passport) {
         List<User> users = jdbcTemplate.query(SQL_SELECT_USER_BY_PASPORT_PASSWORD,
                 new Object[]{passport.getPassport(), passport.getPassword()},
                 new UserMapper());
         return users.size() > 0 ? users.get(0) : null;
+
     }
 
 }

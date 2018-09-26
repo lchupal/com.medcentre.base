@@ -1,0 +1,2 @@
+
+INSERT into clients (idclients, surname, name, middle_name ,date_of_birth, gender, password, pasport, phone_number, mail) VALUES(2, 'Sasha' ,'Sasha', 'Sasha', '2018-01-01', 'Муж', 123123, 'QW123123', 80239123456, 'mail@mail.ru');

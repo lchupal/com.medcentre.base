@@ -9,7 +9,7 @@
     <body>
         <table>
             <tr>
-                <td>Welcome ${firstname}</td>
+                <td>Залогинился</td>
             </tr>
             <tr>
             </tr>

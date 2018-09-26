@@ -4,7 +4,7 @@
         <html>
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-            <title>Registration</title>
+            <title>Home</title>
             <%@ include file="/jsp/include.jsp" %>
             <link rel="stylesheet" href="<c:url value="/resources/css/style.css" />" />
     </head>

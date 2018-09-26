@@ -11,20 +11,22 @@
         <body>
 
          <header>
-                        <ul>
-                           <li><img src="jsp/logotype.png" alt="logotype"  style="width: 290px; margin: 15px; padding-left: 100px;"/></li>
-                           <li></br><p align="right" style="font-size: italic; color: white; padding-left: 1100px; margin: 10px;"> Телефон поддержки </br> +375(29)105 37 43 <p></li>
-                        </ul>
+                        <table width="100%" cellspacing="0" cellpadding="5">
+                                               <tr>
+                                                <td width="200" valign="top"><img src="jsp/logotype.png" alt="logotype"  style="width: 290px; margin: 15px; padding-left: 100px;"/></td>
+                                                <td valign="top"><p align="right" style="font-size: italic; color: red; padding-left: 200px; margin: 10px;"> Телефон поддержки </br> +375(29)105 37 43 <p></td>
+                                               </tr>
+                                              </table>
                     </header>
 
             <form:form id="loginForm" modelAttribute="login" action="loginProcess" method="post">
-                <table align="center"; style="border-style: solid;  outset; border-width: 2px">
+                <table align="center"; style="border-style: solid;  outset border-width: 2px">
                     <tr>
                         <td>
                             <form:label path="passport">Номер паспорта: </form:label>
                         </td>
                         <td>
-                            <form:input path="passport" name="pasport" id="pasport" placeholder="MR123321"/>
+                            <form:input path="passport"  pattern="[A-Z]{2}[0-9]{6}" name="pasport" id="pasport" placeholder="MR123321" required = "required" />
                         </td>
                     </tr>
                     <tr>
@@ -32,7 +34,7 @@
                             <form:label path="password">Пароль:</form:label>
                         </td>
                         <td>
-                            <form:password path="password" name="password" id="password" placeholder="qwerty123" />
+                            <form:password path="password" name="password" id="password" placeholder="qwerty123" required = "required"  />
                         </td>
                     </tr>
                     <tr>
