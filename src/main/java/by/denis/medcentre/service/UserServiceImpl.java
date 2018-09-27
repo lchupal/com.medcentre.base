@@ -25,6 +25,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User validateUser(Login login) {
+
         log.info("Пользователь проинициализирован");
         return userDao.validateUser(login);
 

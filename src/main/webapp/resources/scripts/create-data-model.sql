@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`clients` (
   `pasport` VARCHAR(45) NOT NULL,
   `phone_number` VARCHAR(45) NOT NULL,
   `mail` VARCHAR(45) NULL DEFAULT NULL,
+  `role` VARCHAR(45) NOT NULL DEFAULT 'user',
   PRIMARY KEY (`idClients`),
   UNIQUE INDEX `Pasport_UNIQUE` (`pasport` ASC),
   UNIQUE INDEX `Phone number_UNIQUE` (`phone_number` ASC),
@@ -113,6 +114,24 @@ CREATE TABLE IF NOT EXISTS `mydb`.`doctors_has_services` (
   CONSTRAINT `fk_Doctors_has_Services_Services1`
     FOREIGN KEY (`Services_idServices`)
     REFERENCES `mydb`.`services` (`idServices`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`export clients`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`export clients` (
+  `idClients` INT(11) NULL DEFAULT NULL,
+  `surname` TEXT NULL DEFAULT NULL,
+  `name` TEXT NULL DEFAULT NULL,
+  `middle_name` TEXT NULL DEFAULT NULL,
+  `date_of_birth` TEXT NULL DEFAULT NULL,
+  `gender` TEXT NULL DEFAULT NULL,
+  `password` INT(11) NULL DEFAULT NULL,
+  `pasport` TEXT NULL DEFAULT NULL,
+  `phone_number` INT(11) NULL DEFAULT NULL,
+  `mail` TEXT NULL DEFAULT NULL)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
