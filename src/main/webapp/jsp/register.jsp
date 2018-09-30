@@ -26,6 +26,7 @@
             <form:form id="regForm" modelAttribute="user" action="registerProcess" method="post">
 
                <table align="center" >
+               <br>
                                    <tr>
                                        <td>
                                        </td>

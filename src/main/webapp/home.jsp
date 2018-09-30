@@ -16,8 +16,10 @@
                         <td valign="top"><p align="right" style="font-size: italic; color: red; padding-left: 200px; margin: 10px;"> Телефон поддержки </br> +375(29)105 37 43 <p></td>
                        </tr>
                       </table>
+      </header>
 
           <table align="center">
+          <br>
             <tr>
                 <td><a  style="border-style:  solid ;color: black; margin:0 50px; width: 200px;"  href="login">Login</a>
                 </td>
