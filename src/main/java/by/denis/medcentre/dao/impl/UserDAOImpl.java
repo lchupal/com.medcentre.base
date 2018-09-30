@@ -19,7 +19,7 @@ public class UserDAOImpl implements UserDAO {
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public void register(User user) {
+    public void register(User user)   {
         jdbcTemplate.update(SQL_INSERT_USER,
 
                 user.getSurname(),
@@ -35,12 +35,11 @@ public class UserDAOImpl implements UserDAO {
 
 
     @Override
-    public User validateUser(Login passport) {
+    public User validateUser(Login login) {
         List<User> users = jdbcTemplate.query(SQL_SELECT_USER_BY_PASPORT_PASSWORD,
-                new Object[]{passport.getPassport(), passport.getPassword()},
+                new Object[]{login.getPassport(), login.getPassword()},
                 new UserMapper());
         return users.size() > 0 ? users.get(0) : null;
-
     }
 
 }

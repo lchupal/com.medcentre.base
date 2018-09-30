@@ -10,7 +10,6 @@
 
 
 
-
         </head>
         <body>
 
@@ -72,7 +71,7 @@
                                               <form:label path="gender">Выберите пол</form:label>
                                          </td>
                                          <td>
-                                              <form:select name="gender" path="gender">
+                                              <form:select name="gender" class="form-control" path="gender">
                                               <form:option selected="selected" value="Муж">Муж</form:option>
                                               <form:option value="Жен">Жен</form:option>
                                                </form:select>

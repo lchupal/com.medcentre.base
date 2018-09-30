@@ -18,12 +18,12 @@
                       </table>
       </header>
 
-          <table align="center">
+          <table align="right">
           <br>
             <tr>
-                <td><a  style="border-style:  solid ;color: black; margin:0 50px; width: 200px;"  href="login">Login</a>
+                <td><a  style="border-style:  solid ;color: black; margin:20px; width: 200px;"  href="login">Login</a>
                 </td>
-                <td><a  style="border-style: solid;color: black; margin:0 50px; width: 200px"  href="register">Register</a>
+                <td><a  style="border-style: solid;color: black; margin:20px; width: 200px"  href="register">Register</a>
                 </td>
             </tr>
         </table>

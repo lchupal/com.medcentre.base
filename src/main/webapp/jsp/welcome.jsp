@@ -18,14 +18,18 @@
                           </table>
           </header>
 
-        <table>
+        <table align="center"; style="border-style: solid;  outset border-width: 2px">
             <tr>
                 <td>Залогинился</td>
+                </tr>
+                <br>
+             <tr>
+                 <td style="font-style: italic; color: Green;">You are logged in: ${login}</td>
+             </tr>
+             <br>
+                  <tr><td href="/user/info">View profile</td>
             </tr>
-            <tr>
-            </tr>
-            <tr>
-            </tr>
+            <br>
             <tr>
                 <td><a href="home.jsp">Home</a>
                 </td>

@@ -29,9 +29,13 @@ public class RegistrationController {
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
     public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
                                 @ModelAttribute("user") User user) {
+        ModelAndView modelAndView;
         userService.register(user);
-        return new ModelAndView("surname", "surname", user.getId());
-    }
-
-
-}
+        if (user != null) {
+            modelAndView = new ModelAndView("RegistrationComplete");
+            modelAndView.addObject("user", user.toString());
+        } else {modelAndView = new ModelAndView("/ErrorPage");
+            modelAndView.addObject("message", "Попробуйте снова или обартитесь к Администратору");
+        }
+        return modelAndView;
+    }}

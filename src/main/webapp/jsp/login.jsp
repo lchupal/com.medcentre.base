@@ -20,14 +20,21 @@
                     </header>
 
             <form:form id="loginForm" modelAttribute="login" action="loginProcess" method="post">
-                <table align="center"; style="border-style: solid;  outset border-width: 2px">
+                <table align="center">
+                <tr>
+                                                       <td>
+                                                       </td>
+                                                       <td>
+                                                           <p align="center" style="color: DodgerBlue; font-weight: bold;">Заполните Поля для входа</p>
+                                                       </td>
+                                                   </tr>
                     <tr>
                     <br>
                         <td>
                             <form:label path="passport">Номер паспорта: </form:label>
                         </td>
                         <td>
-                            <form:input path="passport"  pattern="[A-Z]{2}[0-9]{6}" name="pasport" id="pasport" placeholder="MR123321" required = "required" />
+                            <form:input path="passport" class="form-control"  pattern="[A-Z]{2}[0-9]{6}" name="pasport" id="pasport" placeholder="MR123321" required = "required" />
                         </td>
                     </tr>
                     <tr>
@@ -35,13 +42,13 @@
                             <form:label path="password">Пароль:</form:label>
                         </td>
                         <td>
-                            <form:password path="password" name="password" id="password" placeholder="qwerty123" required = "required"  />
+                            <form:password path="password"  class="form-control" name="password" id="password" placeholder="qwerty123" required = "required"  />
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td align="left">
-                            <form:button id="login" name="login">Войти</form:button>
+                            <form:button id="login"  class="btn btn-info" name="login">Войти</form:button>
                         </td>
                     </tr>
                     <tr></tr>
